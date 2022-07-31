@@ -1,0 +1,41 @@
+package com.myself.mymq.broker.dto;
+
+import io.netty.channel.Channel;
+
+/**
+ * @author GuoZeWei
+ * @date 2022/7/26  21:40
+ */
+public class ChannelGroupNameDto {
+    /**
+     * 分组名称
+     */
+    private String consumerGroupName;
+    /**
+     * 通道
+     */
+    private Channel channel;
+
+    public static ChannelGroupNameDto of(String consumerGroupName,Channel channel){
+        ChannelGroupNameDto dto=new ChannelGroupNameDto();
+        dto.setConsumerGroupName(consumerGroupName);
+        dto.setChannel(channel);
+        return dto;
+    }
+
+    public String getConsumerGroupName() {
+        return consumerGroupName;
+    }
+
+    public void setConsumerGroupName(String consumerGroupName) {
+        this.consumerGroupName = consumerGroupName;
+    }
+
+    public Channel getChannel() {
+        return channel;
+    }
+
+    public void setChannel(Channel channel) {
+        this.channel = channel;
+    }
+}

@@ -1,0 +1,6 @@
+# Project exclude paths
+/mq-broker/target/
+/mq-common/target/
+/mq-consumer/target/
+/mq-producer/target/
+/mq-test/target/
